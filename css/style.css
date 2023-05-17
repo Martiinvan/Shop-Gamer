@@ -1,0 +1,131 @@
+/* Reset */
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.fondo {
+    background: #222222;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.above {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.above div {
+    display: flex;
+    gap: 10px;
+}
+
+.above img {
+    width: 25px;
+    filter: invert(1);
+}
+
+.above div a {
+    background-color: #111111;
+    padding: 10px;
+    border-radius: 45%;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #111111;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 5%;
+}
+
+nav ul li,
+nav a {
+    padding: 20px 20px;
+}
+
+nav li:hover,
+nav a:hover,
+.above div a:hover {
+    background-color: #939393;
+    color: #111111;
+}
+
+/* BOTON BUSQUEDA */
+.input-style {
+    padding: 10px;
+    border: 2px solid #0090c5;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    outline: none;
+    background: #000000;
+}
+
+.input-style:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+}
+
+/* Contenido de pagina */
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px 0;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #939393;
+}
+
+.text ul li {
+    list-style: square;
+}
+
+.text h2 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.text a {
+    background-color: #0090c5;
+    padding: 15px 50px;
+    border-radius: 9%;
+    margin-top: 30px;
+}
+
+.marcas img {
+    margin: 50px 0;
+    width: 100px;
+    filter: invert(1);
+}
+
+.container h3 {
+    color: #0090c5;
+    font-size: 35px;
+}
