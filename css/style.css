@@ -1,6 +1,9 @@
 /* Reset */
 * {
     margin: 0;
+    transition: 0.3s;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 a {
@@ -20,6 +23,14 @@ li {
 header {
     display: flex;
     flex-direction: column;
+}
+
+h1 {
+    color: rgb(162, 31, 31);
+}
+
+h1:hover {
+    color: #0090c5;
 }
 
 .above {
@@ -63,21 +74,20 @@ nav a {
 }
 
 nav li:hover,
-nav a:hover,
 .above div a:hover {
-    background-color: #939393;
+    background-color: #0091c576;
     color: #111111;
 }
 
 /* BOTON BUSQUEDA */
 .input-style {
     padding: 10px;
-    border: 2px solid #0090c5;
+    border: 2px solid rgb(162, 31, 31);
     border-radius: 5px;
     font-size: 16px;
     color: #ffffff;
     outline: none;
-    background: #000000;
+    background: #111111;
 }
 
 .input-style:focus {
@@ -119,6 +129,10 @@ nav a:hover,
     margin-top: 30px;
 }
 
+.text a:hover {
+    background-color: rgb(162, 31, 31);
+}
+
 .marcas img {
     margin: 50px 0;
     width: 100px;
@@ -128,4 +142,64 @@ nav a:hover,
 .container h3 {
     color: #0090c5;
     font-size: 35px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle img {
+    width: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .background{
+        background-color: #111111;
+        width: 100%;
+        padding: 5px 0;
+    }
+    .menu-toggle {
+        display: block;
+        margin: auto;
+        height: 50px;
+        cursor: pointer;
+        filter: invert(1);
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    nav.active ul{
+        margin-top: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-toggle.active {
+        position: relative;
+        left: 95%;
+        bottom: 0;
+        top: -55px;
+        margin: 0;
+        padding: 0;
+        transform: translate(-50%, -50%);
+    }
+    nav.active ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav.active ul li a {
+        padding: 0 40%;
+        width: 100%;
+    }
 }
